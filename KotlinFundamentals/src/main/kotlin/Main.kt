@@ -8,6 +8,15 @@ fun main() {
 
     printNotificationSummary(morningNotification)
     printNotificationSummary(eveningNotification)
+
+    val songCatalog = SongCatalog(
+        title = "Song name",
+        artist = "K K",
+        1999,
+        playCount = 10,
+        isPopular = false
+    )
+    songCatalog.printDescription()
 }
 
 fun printNotificationSummary(notification: Int) {
