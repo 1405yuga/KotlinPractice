@@ -11,4 +11,13 @@ fun main() {
         durationInMinutes = 15
     )
     println(event)
+
+    val eventsList = mutableListOf(
+        Event(title = "Wake up", description = "Time to get up", dayPart = DayPart.MORNING, durationInMinutes = 0),
+        Event(title = "Eat breakfast", dayPart = DayPart.MORNING, durationInMinutes = 15),
+        Event(title = "Learn about Kotlin", dayPart = DayPart.AFTERNOON, durationInMinutes = 30),
+        Event(title = "Practice Compose", dayPart = DayPart.AFTERNOON, durationInMinutes = 60),
+        Event(title = "Watch latest DevBytes video", dayPart = DayPart.AFTERNOON, durationInMinutes = 10),
+        Event(title = "Check out latest Android Jetpack library", dayPart = DayPart.EVENING, durationInMinutes = 45)
+    )
 }
