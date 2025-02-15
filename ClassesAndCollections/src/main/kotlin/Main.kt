@@ -20,4 +20,7 @@ fun main() {
         Event(title = "Watch latest DevBytes video", dayPart = DayPart.AFTERNOON, durationInMinutes = 10),
         Event(title = "Check out latest Android Jetpack library", dayPart = DayPart.EVENING, durationInMinutes = 45)
     )
+
+    val shortEvent = eventsList.filter { it -> it.durationInMinutes < 60 }
+    println(shortEvent)
 }
