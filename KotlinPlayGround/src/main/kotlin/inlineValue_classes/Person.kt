@@ -13,3 +13,7 @@ value class CustomerName(val name: String) {
         println("Hello from ${this.name}")
     }
 }
+
+//generic-inline
+@JvmInline
+value class Box<T>(val value: T)

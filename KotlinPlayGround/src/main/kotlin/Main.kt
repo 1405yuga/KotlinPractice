@@ -9,6 +9,7 @@ import org.example.enum_classes.Color
 import org.example.functional_interface.IntPredicate
 import org.example.functional_interface.MyFunctionalInterface
 import org.example.inheritance.Mango
+import org.example.inlineValue_classes.Box
 import org.example.inlineValue_classes.CustomerName
 import org.example.interfaces.MyClassA
 import org.example.nested_inner_class.Outer
@@ -38,6 +39,12 @@ fun inlineValeClass() {
     val customerName = CustomerName("John")
     customerName.greet()
     println("${customerName.length}")
+
+    //inline----
+    val intBox = Box(123)
+    val stringBox = Box("Hell0")
+
+    println("Generic Inline : ${intBox.value}  ${stringBox.value}")
 }
 
 fun enumClasses() {
