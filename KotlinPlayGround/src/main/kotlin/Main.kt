@@ -9,6 +9,7 @@ import org.example.functional_interface.IntPredicate
 import org.example.functional_interface.MyFunctionalInterface
 import org.example.inheritance.Mango
 import org.example.interfaces.MyClassA
+import org.example.nested_inner_class.Outer
 import org.example.sealed_classes.*
 import org.example.sealed_classes.Error.*
 
@@ -25,7 +26,16 @@ fun main() {
     extensions()
     dataclasses()
     sealedclasses()
+    nestedAndInnerClasses()
     exceptions(x = 4)
+}
+
+fun nestedAndInnerClasses() {
+    val nestedClass = Outer.NestedClass()
+    println("nestedClass: ${nestedClass.nestedNum()}")
+
+    val innerClass = Outer().InnerClass()
+    println("innerClass: ${innerClass.innerFun()}")
 }
 
 fun handleError(error: Error) {
