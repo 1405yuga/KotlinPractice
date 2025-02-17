@@ -31,4 +31,6 @@ fun main() {
 
     val lastEvent = eventsList.last()
     println(lastEvent.title)
+
+    println(lastEvent.durationOfEvent)
 }
