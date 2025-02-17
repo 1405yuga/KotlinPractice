@@ -5,6 +5,7 @@ import org.example.classes.Person
 import org.example.classes.Pet
 import org.example.classes.PrivateConstructorClass
 import org.example.dataclass.User
+import org.example.enum_classes.Color
 import org.example.functional_interface.IntPredicate
 import org.example.functional_interface.MyFunctionalInterface
 import org.example.inheritance.Mango
@@ -27,7 +28,13 @@ fun main() {
     dataclasses()
     sealedclasses()
     nestedAndInnerClasses()
+    enumClasses()
     exceptions(x = 4)
+}
+
+fun enumClasses() {
+    val color = Color.RED
+    println("Color:${color.name} - ${color.rgb}")
 }
 
 fun nestedAndInnerClasses() {
