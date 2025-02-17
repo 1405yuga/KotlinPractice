@@ -1,5 +1,7 @@
 package org.example
 
+import object_declarations.MyOnClick
+import object_declarations.ObjectDeclarationAndExpression
 import org.example.abstract_classes.Dog
 import org.example.classes.Person
 import org.example.classes.Pet
@@ -32,7 +34,35 @@ fun main() {
     nestedAndInnerClasses()
     enumClasses()
     inlineValeClass()
+    objectDeclarationAndExpression()
     exceptions(x = 4)
+}
+
+object Singleton {
+    var count = 0
+    fun printCount() {
+        println("Count: $count")
+    }
+}
+
+fun objectDeclarationAndExpression() {
+    //object-------
+    Singleton.count++
+    Singleton.printCount()
+
+    //companion object--------
+    ObjectDeclarationAndExpression.showMessage()
+    ObjectDeclarationAndExpression().someFunction()
+
+    //object expression
+    val myObj = object : MyOnClick {
+        override fun onClick() {
+            println("My on click")
+        }
+
+    }
+
+    myObj.onClick()
 }
 
 fun inlineValeClass() {
