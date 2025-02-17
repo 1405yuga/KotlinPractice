@@ -9,6 +9,7 @@ import org.example.enum_classes.Color
 import org.example.functional_interface.IntPredicate
 import org.example.functional_interface.MyFunctionalInterface
 import org.example.inheritance.Mango
+import org.example.inlineValue_classes.CustomerName
 import org.example.interfaces.MyClassA
 import org.example.nested_inner_class.Outer
 import org.example.sealed_classes.*
@@ -29,7 +30,14 @@ fun main() {
     sealedclasses()
     nestedAndInnerClasses()
     enumClasses()
+    inlineValeClass()
     exceptions(x = 4)
+}
+
+fun inlineValeClass() {
+    val customerName = CustomerName("John")
+    customerName.greet()
+    println("${customerName.length}")
 }
 
 fun enumClasses() {
