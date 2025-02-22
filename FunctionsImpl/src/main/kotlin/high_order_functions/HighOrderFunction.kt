@@ -1,9 +1,6 @@
 package org.example.high_order_functions
 
-//normal func
-fun addSome(a: Int, b: Int): Int {
-    return a + b
-}
+import org.example.addSome
 
 //as parameter
 fun operateOnNums(num1: Int, num2: Int, op: (num1: Int, num2: Int) -> Int) {
