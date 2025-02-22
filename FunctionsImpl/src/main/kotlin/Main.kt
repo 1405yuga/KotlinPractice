@@ -7,6 +7,8 @@ import org.example.inline_funcs.testIfEven
 import org.example.invoke_function.stringPlus
 import org.example.lambda_expression.anonymous
 import org.example.lambda_expression.sum
+import org.example.operator_overloading.Counter
+import org.example.operator_overloading.OperatorOverloading
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -42,4 +44,11 @@ fun main() {
 
     }
 
+    //operator overloading
+    println("Operator Overloading---")
+    val operatorOverloading = -OperatorOverloading(3, 5)
+    println(operatorOverloading)
+    var t = Counter(x = 5)
+    t++
+    println(t)
 }
