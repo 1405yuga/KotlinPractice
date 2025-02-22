@@ -3,6 +3,7 @@ package org.example
 import org.example.high_order_functions.getOperation
 import org.example.high_order_functions.operateOnNums
 import org.example.infix_function.Calculator
+import org.example.inline_funcs.testIfEven
 import org.example.invoke_function.stringPlus
 import org.example.lambda_expression.anonymous
 import org.example.lambda_expression.sum
@@ -34,5 +35,11 @@ fun main() {
     val map = hashMapOf(1 to "one", 2 to "two", 3 to "three")
     map.forEach({ (_, v) -> println(v) })
     println(anonymous(6, 10))  //anonymous func
+
+    //inline functions
+    testIfEven(5) { num, isEven ->
+        println("$num is even = $isEven")
+
+    }
 
 }
