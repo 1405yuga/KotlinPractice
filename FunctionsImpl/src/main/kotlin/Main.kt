@@ -3,6 +3,7 @@ package org.example
 import org.example.high_order_functions.getOperation
 import org.example.high_order_functions.operateOnNums
 import org.example.infix_function.Calculator
+import org.example.invoke_function.stringPlus
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -22,5 +23,7 @@ fun main() {
     val op = getOperation(type = "rfr")
     println(op(5, 7))
 
+    //invoking
+    println(stringPlus.invoke("ff","nn"))
 
 }
