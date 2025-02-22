@@ -1,6 +1,5 @@
 package org.example
 
-import org.example.high_order_functions.addSome
 import org.example.high_order_functions.getOperation
 import org.example.high_order_functions.operateOnNums
 import org.example.infix_function.Calculator
