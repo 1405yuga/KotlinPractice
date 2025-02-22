@@ -4,6 +4,8 @@ import org.example.high_order_functions.getOperation
 import org.example.high_order_functions.operateOnNums
 import org.example.infix_function.Calculator
 import org.example.invoke_function.stringPlus
+import org.example.lambda_expression.anonymous
+import org.example.lambda_expression.sum
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -24,6 +26,13 @@ fun main() {
     println(op(5, 7))
 
     //invoking
-    println(stringPlus.invoke("ff","nn"))
+    println(stringPlus.invoke("ff", "nn"))
+
+    //lambda expression
+    println("Lambda exp--")
+    println(sum(2, 5))
+    val map = hashMapOf(1 to "one", 2 to "two", 3 to "three")
+    map.forEach({ (_, v) -> println(v) })
+    println(anonymous(6, 10))  //anonymous func
 
 }
