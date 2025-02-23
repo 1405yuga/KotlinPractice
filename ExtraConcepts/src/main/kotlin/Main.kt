@@ -16,6 +16,8 @@ fun main() {
     //equality--------------------------------------
     val x = String("abc".toCharArray())
     val y = String("abc".toCharArray())
-    println("Structural eq: ${x == y} , Referential equality: ${x === y}")
+    println("Structural equality: ${x == y} , Referential equality: ${x === y}")
 
+    //this expression--------------
+    ThisExpression().InnerClass().f()
 }
