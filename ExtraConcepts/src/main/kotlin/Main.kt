@@ -13,4 +13,9 @@ fun main() {
     val num: Int? = obj as? Int
     println("Safe casts: $str, $num")
 
+    //equality--------------------------------------
+    val x = String("abc".toCharArray())
+    val y = String("abc".toCharArray())
+    println("Structural eq: ${x == y} , Referential equality: ${x === y}")
+
 }
