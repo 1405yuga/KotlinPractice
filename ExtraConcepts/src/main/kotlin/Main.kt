@@ -20,4 +20,10 @@ fun main() {
 
     //this expression--------------
     ThisExpression().InnerClass().f()
+
+    //Asynchronous techniques
+    AsynchronousTechniques.threading()
+    AsynchronousTechniques.downloadData("some.com") { result ->
+        println("Call back completed : $result")
+    }
 }
