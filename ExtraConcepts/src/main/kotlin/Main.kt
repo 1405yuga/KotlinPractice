@@ -54,5 +54,7 @@ fun main() {
 
     val (myName, myAge) = person
     val myGender = person.component3()
-    println("$myName - $myAge - $myGender")
+    val (_, someAge) = person
+    println("$myName - $myAge - $myGender - $someAge")
+
 }
