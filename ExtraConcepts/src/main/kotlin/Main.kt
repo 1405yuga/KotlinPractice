@@ -5,6 +5,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.example.destructuring.Person
+import kotlin.reflect.full.memberProperties
 
 fun main() {
     //null safety------------------------------------
@@ -56,5 +57,11 @@ fun main() {
     val myGender = person.component3()
     val (_, someAge) = person
     println("$myName - $myAge - $myGender - $someAge")
+
+    //Reflection---------------------------------
+    val personClass = Person::class
+    val properties = Person::class.memberProperties
+    println("${personClass.simpleName} ")
+    properties.forEach { print(it.name+" ") }
 
 }
