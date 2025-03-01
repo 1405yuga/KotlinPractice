@@ -4,6 +4,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import org.example.destructuring.Person
 
 fun main() {
     //null safety------------------------------------
@@ -44,4 +45,14 @@ fun main() {
         println(result.await())
     }
 
+    //Destructuring----------------------------
+    val person = Person(
+        name = "Yuga",
+        age = 23,
+        gender = "Female"
+    )
+
+    val (myName, myAge) = person
+    val myGender = person.component3()
+    println("$myName - $myAge - $myGender")
 }
