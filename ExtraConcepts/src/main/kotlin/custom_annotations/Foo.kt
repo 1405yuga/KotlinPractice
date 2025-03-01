@@ -1,8 +1,8 @@
 package org.example.custom_annotations
 
-@Fancy
+@Fancy("class")
 class Foo {
-    @Fancy
+    @Fancy("function")
     fun buz(): Int {
         return 1
     }
