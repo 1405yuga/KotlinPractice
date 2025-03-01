@@ -1,5 +1,10 @@
 package org.example
 
+import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+
 fun main() {
     //null safety------------------------------------
     println("Null safety----")
@@ -22,8 +27,21 @@ fun main() {
     ThisExpression().InnerClass().f()
 
     //Asynchronous techniques
-    AsynchronousTechniques.threading()
-    AsynchronousTechniques.downloadData("some.com") { result ->
-        println("Call back completed : $result")
+//    AsynchronousTechniques.threading()
+//    AsynchronousTechniques.downloadData("some.com") { result ->
+//        println("Call back completed : $result")
+//    }
+//coroutine
+    runBlocking {
+        launch { delay(1000) }
+        println("Hello from coroutine")
     }
+    runBlocking {
+        val result = async {
+            delay(2000)
+            "Hello , async coroutine"
+        }
+        println(result.await())
+    }
+
 }
