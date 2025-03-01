@@ -1,6 +1,6 @@
 package org.example.custom_annotations
 
-@Fancy("class")
+@Fancy("class", replaceWith = ReplaceWith("something to replace"))
 class Foo {
     @Fancy("function")
     fun buz(): Int {
