@@ -64,4 +64,6 @@ fun main() {
     println("${personClass.simpleName} ")
     properties.forEach { print(it.name+" ") }
 
+    Some().name
+
 }
