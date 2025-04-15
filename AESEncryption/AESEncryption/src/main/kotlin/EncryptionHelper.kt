@@ -8,7 +8,7 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 
-object Encryption {
+object EncryptionHelper {
     //store in user table
     fun generateSalt(): ByteArray {
         val salt = ByteArray(size = 16)
@@ -38,4 +38,13 @@ object Encryption {
         cipher.init(Cipher.ENCRYPT_MODE, key, IvParameterSpec(iv))
         return cipher.doFinal(plainText.toByteArray(Charsets.UTF_8))
     }
+
+    fun decrypt(cipherText: ByteArray, key: SecretKeySpec, iv: ByteArray): String {
+        val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
+        cipher.init(Cipher.DECRYPT_MODE, key, IvParameterSpec(iv))
+        val plainBytes = cipher.doFinal(cipherText)
+        return String(plainBytes, Charsets.UTF_8)
+    }
+
+    fun jsonToUserData(jsonObject: String): UserData = Gson().fromJson(jsonObject, UserData::class.java)
 }
