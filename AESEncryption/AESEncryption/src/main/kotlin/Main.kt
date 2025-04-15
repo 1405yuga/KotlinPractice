@@ -23,7 +23,7 @@ fun main() {
     )
     println("Encrypted data : $encryptedData")
     //todo : data to base64 encode
-
+    //todo : decode from base64
     //Decryption steps-----------------------------------------
     val aeskey = EncryptionHelper.deriveAESKey(
         masterKey = "123456", salt = salt
